@@ -12,6 +12,7 @@ dependencies:
   firebase_auth: ^5.1.0
   flutter:
     sdk: flutter
+  flutter_svg: ^2.0.10+1
 
 dev_dependencies:
   flutter_test:

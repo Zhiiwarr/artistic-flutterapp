@@ -38,6 +38,7 @@ class RequestListPage extends StatelessWidget {
                     var request = snapshot.data!.docs[index];
                     String itemId = request['itemId'];
                     String status = request['status'];
+                    String requestId = request.id; // Document ID of the request
 
                     // Fetch item details from 'items' collection based on itemId
                     return FutureBuilder<DocumentSnapshot>(
@@ -76,8 +77,12 @@ class RequestListPage extends StatelessWidget {
                           ),
                           trailing: IconButton(
                             icon: Icon(Icons.delete),
-                            onPressed: () {
-                              // Implement delete action if needed
+                            onPressed: () async {
+                              // Implement delete action
+                              await FirebaseFirestore.instance
+                                  .collection('requests')
+                                  .doc(requestId)
+                                  .delete();
                             },
                           ),
                         );

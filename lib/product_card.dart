@@ -69,7 +69,8 @@ class ProductCard extends StatelessWidget {
                         .add({
                       'userId': userId,
                       'itemId': id,
-                      'artistId': artistId,
+                    'status': 'pending'
+,                      'artistId': artistId,
                       'timestamp': Timestamp.now(),
                     });
                     // Show success message or navigate to success page

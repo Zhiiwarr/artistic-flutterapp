@@ -24,12 +24,7 @@ class _HomePageState extends State<HomePage> {
               // Implement profile button onPressed action
             },
           ),
-          IconButton(
-            icon: const Icon(Icons.search),
-            onPressed: () {
-              // Implement search button onPressed action
-            },
-          ),
+       
         ],
       ),
       body: Center(
